@@ -1,11 +1,11 @@
 .block#text
   .content
-    - if @year
-      %h2= "Year #{@year}"
     .inner
       #helper-links
-        = link_to("CSV Format", request.path + ".csv")
-        = link_to("XML Format", request.path + ".xml")
+        = link_to("CSV Format", home_url({:format => "csv"}.merge(request.parameters)))
+        = link_to("XML Format", home_url({:format => "xml"}.merge(request.parameters)))
+      - if @year
+        %h2= "Year #{@year}"
       %table
         %tr
           %th Date

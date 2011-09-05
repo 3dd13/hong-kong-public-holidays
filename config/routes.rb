@@ -6,7 +6,7 @@ HongKongPublicHolidays::Application.routes.draw do
   devise_for :users
 
   root :to => "home#index"
-  match 'home' => 'home#index'
+  match 'home' => 'home#index', :as => :home
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -23,13 +23,18 @@
               / cache this year menu 
               - all_years.each do |year|
                 %li
-                  = link_to year, root_path(:year => year)
+                  = link_to year, home_url(:year => year)
               %li
-                = link_to "All", root_path
+                = link_to "All", home_url
           = yield
           #footer
             .block
               %p
-                Copyright &copy; #{Time.now.year} Hong Kong Public Holidays.
+                Data source: 
+                =link_to "Hong Kong Gov Website", "http://www.gov.hk/en/about/abouthk/holiday/"
+            .block
+              %p
+                This Web Application is Open Source. Source code available here:
+                =link_to "Github", "http://github.com/3dd13"
         #sidebar
           = yield :sidebar

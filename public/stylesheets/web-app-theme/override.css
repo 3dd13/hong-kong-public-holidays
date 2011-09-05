@@ -20,6 +20,11 @@ body {
 #helper-links a {
 	float: right;
 	padding: 0px 10px;
+	text-decoration: underline;
+}
+
+#helper-links a:hover {
+	text-decoration: none;
 }
 
 #user-navigation ul {
@@ -48,4 +53,8 @@ body {
 #main .block .content .inner td {
 	text-align: center;
 	padding: 5px;
+}
+
+.content h2 {
+	text-align: center;
 }
