@@ -43,11 +43,18 @@
           #footer
             .block
               %p
-                Data source: 
+                Data source:
+                =image_tag("http://www.gov.hk/favicon.ico")
                 =link_to "Hong Kong Gov Website", "http://www.gov.hk/en/about/abouthk/holiday/"
             .block
               %p
-                This Web Application is Open Source. Source code available here:
+                Source Code available at
+                =image_tag("http://github.com/favicon.ico")
                 =link_to "Github", "http://github.com/3dd13"
+            .block
+              %p
+                written in Ruby On Rails, by 
+                =image_tag("http://3dd13.me/favicon.ico")
+                =link_to "3dd13", "http://3dd13.me"
         #sidebar
           = yield :sidebar
