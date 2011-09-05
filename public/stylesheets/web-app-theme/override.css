@@ -17,8 +17,17 @@ body {
 	width: 100%;
 }
 
+#header {
+	overflow: hidden;
+}
+
 #header h1 {
 	padding: 20px;
+	float: left;
+}
+
+#header img {
+    float: left;
 }
 
 #helper-links {
