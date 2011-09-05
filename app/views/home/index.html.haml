@@ -1,0 +1,17 @@
+.block#text
+  .content
+    - if @year
+      %h2= "Year #{@year}"
+    .inner
+      #helper-links
+        = link_to("CSV Format", request.path + ".csv")
+        = link_to("XML Format", request.path + ".xml")
+      %table
+        %tr
+          %th Date
+          %th Description
+
+        - @holidays.each do |hk_public_holiday|
+          %tr
+            %td= hk_public_holiday.date
+            %td= hk_public_holiday.description

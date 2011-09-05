@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %title Hong Kong Public Holidays
+    = stylesheet_link_tag "web-app-theme/base", "web-app-theme/themes/warehouse/style", "web-app-theme/override", :cache => true
+    = javascript_include_tag :defaults, :cache => true
+    = csrf_meta_tag
+  %body
+    #container
+      #header
+        %h1
+          %a{:href => "/"} Hong Kong Public Holidays
+        #main-navigation
+          %ul.wat-cf
+      #wrapper.wat-cf
+        .flash
+          - flash.each do |type, message|
+            %div{:class => "message #{type}"}
+              %p= message
+        #main
+          #user-navigation
+            %ul.wat-cf
+              / cache this year menu 
+              - all_years.each do |year|
+                %li
+                  = link_to year, root_path(:year => year)
+              %li
+                = link_to "All", root_path
+          = yield
+          #footer
+            .block
+              %p
+                Copyright &copy; #{Time.now.year} Hong Kong Public Holidays.
+        #sidebar
+          = yield :sidebar

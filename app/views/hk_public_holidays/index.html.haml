@@ -1,0 +1,21 @@
+%h1 Listing hk_public_holidays
+
+%table
+  %tr
+    %th Year
+    %th Date
+    %th
+    %th
+    %th
+
+  - @hk_public_holidays.each do |hk_public_holiday|
+    %tr
+      %td= hk_public_holiday.year
+      %td= hk_public_holiday.date
+      %td= link_to 'Show', hk_public_holiday
+      %td= link_to 'Edit', edit_hk_public_holiday_path(hk_public_holiday)
+      %td= link_to 'Destroy', hk_public_holiday, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Hk public holiday', new_hk_public_holiday_path

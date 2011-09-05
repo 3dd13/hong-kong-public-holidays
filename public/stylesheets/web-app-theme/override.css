@@ -1,0 +1,51 @@
+/* Override here any style defined by web-app-theme */
+
+body {
+	font-size: 1.2em;
+}
+
+#container {
+	min-width: 800px;
+}
+
+#header h1 {
+	padding: 20px;
+}
+
+#helper-links {
+	margin: 10px 0px;
+	overflow: hidden;
+}
+
+#helper-links a {
+	float: right;
+	padding: 0px 10px;
+}
+
+#user-navigation ul {
+	margin-top: 20px;
+}
+
+#user-navigation ul li a {
+	padding: 3px;
+	font-size: 1.2em;
+}
+
+.form input.text_field {
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.form .navform {
+	background-color: #FFF;
+	border: none;
+}
+
+#main .block .content .inner {
+	padding: 20px;
+}
+
+#main .block .content .inner td {
+	text-align: center;
+	padding: 5px;
+}

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Year:
+  = @hk_public_holiday.year
+%p
+  %b Date:
+  = @hk_public_holiday.date
+
+= link_to 'Edit', edit_hk_public_holiday_path(@hk_public_holiday)
+\|
+= link_to 'Back', hk_public_holidays_path
