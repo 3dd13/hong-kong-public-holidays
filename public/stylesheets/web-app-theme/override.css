@@ -8,6 +8,15 @@ body {
 	min-width: 800px;
 }
 
+#wrapper {
+	width: 800px;
+    margin: 0 auto;
+}
+
+#main {
+	width: 100%;
+}
+
 #header h1 {
 	padding: 20px;
 }
@@ -27,6 +36,12 @@ body {
 	text-decoration: none;
 }
 
+#user-navigation {
+	position: relative;
+	right: 0;
+	float: right;
+}
+	
 #user-navigation ul {
 	margin-top: 20px;
 }
@@ -34,6 +49,10 @@ body {
 #user-navigation ul li a {
 	padding: 3px;
 	font-size: 1.2em;
+}
+
+#user-navigation ul li a:link, #user-navigation ul li a:visited {
+	color: #8899AA;
 }
 
 .form input.text_field {
@@ -57,4 +76,6 @@ body {
 
 .content h2 {
 	text-align: center;
+    border-bottom: 4px solid #334455;
+    padding-bottom: 10px;
 }
