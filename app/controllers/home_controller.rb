@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     respond_to do |format|
       format.html
       format.xml  { render :xml => @holidays, :except => [:created_at, :id, :updated_at] }
-      format.csv  { 
+      format.csv  {
         send_data(@holidays.to_csv_response, :filename => "hk_public_holidays#{@year}.csv", :disposition => "inline", :type => "csv")
       }
     end
