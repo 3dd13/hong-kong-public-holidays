@@ -14,7 +14,6 @@ namespace :holidays do
       page.search(".content table tr").map do |row|
         cells = row.search("td")
         date = cells[1].text.strip.match(/(\d*\s\w*)/)
-        puts "date #{date}"
         if date
           tmp_date = Date.parse(date[1])
           date_value = Date.new(year, tmp_date.month, tmp_date.day)
