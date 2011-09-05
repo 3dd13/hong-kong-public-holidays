@@ -79,6 +79,7 @@ body {
 }
 
 #main .block .content .inner td {
+	border-top: 2px dotted #667788;
 	text-align: center;
 	padding: 5px;
 }
@@ -87,4 +88,8 @@ body {
 	text-align: center;
     border-bottom: 4px solid #334455;
     padding-bottom: 10px;
+}
+
+#user-navigation ul li a.past-year {
+	text-decoration: line-through;
 }
